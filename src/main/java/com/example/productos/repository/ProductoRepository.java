@@ -9,10 +9,8 @@ import java.util.List;
 
 public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
-    /**
-     * Consulta personalizada en JPQL (no SQL nativo) que obtiene
-     * los productos que pertenecen a una categoría dada.
-     */
+
+    
     @Query("SELECT p FROM Producto p WHERE p.categoria = :categoria")
     List<Producto> buscarPorCategoria(@Param("categoria") String categoria);
 }

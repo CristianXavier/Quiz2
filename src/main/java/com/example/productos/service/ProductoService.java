@@ -1,20 +1,17 @@
 package com.example.productos.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.productos.model.Producto;
+import com.example.productos.repository.ProductoRepository;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
-import com.example.productos.model.Producto;
-import com.example.productos.repository.ProductoRepository;
+import java.util.List;
 
 @Service
 public class ProductoService {
 
     private final ProductoRepository productoRepository;
 
-    @Autowired
     public ProductoService(ProductoRepository productoRepository) {
         this.productoRepository = productoRepository;
     }
